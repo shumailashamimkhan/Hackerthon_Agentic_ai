@@ -1,0 +1,148 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1a73e8; /* Google blue for tech/robotics theme */
+  --ifm-color-primary-dark: #1865d0;
+  --ifm-color-primary-darker: #175bb8;
+  --ifm-color-primary-darkest: #134a97;
+  --ifm-color-primary-light: #2c80e9;
+  --ifm-color-primary-lighter: #4d93eb;
+  --ifm-color-primary-lightest: #6eaaec;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Additional custom variables for our Physical AI theme */
+  --physical-ai-accent: #ff6b35; /* Orange for highlights */
+  --physical-ai-neutral: #4a4a4a; /* Dark gray for text */
+  --physical-ai-light-bg: #f8f9fa; /* Light background */
+  --physical-ai-card-bg: #ffffff; /* Card background */
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4285f4; /* Lighter blue for dark mode */
+  --ifm-color-primary-dark: #3371e3;
+  --ifm-color-primary-darker: #2a65d0;
+  --ifm-color-primary-darkest: #2155b9;
+  --ifm-color-primary-light: #5a97f5;
+  --ifm-color-primary-lighter: #73a9f7;
+  --ifm-color-primary-lightest: #8db9f8;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode custom variables */
+  --physical-ai-accent: #ff8a5c;
+  --physical-ai-neutral: #dcdcdc;
+  --physical-ai-light-bg: #1e1e1e;
+  --physical-ai-card-bg: #2d2d2d;
+}
+
+/* Custom styles for Physical AI & Humanoid Robotics book */
+
+/* Enhanced typography for technical content */
+.markdown h1, .markdown h2, .markdown h3 {
+  font-weight: 600;
+}
+
+/* Card-like containers for technical diagrams and examples */
+.codeBlockContainer {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+/* Custom styling for note/warning blocks */
+.alert {
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Special styling for robotics/technical diagrams */
+.robotics-diagram {
+  background-color: var(--physical-ai-light-bg);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Ensure code blocks are readable on small screens */
+  .prism-code {
+    font-size: 0.8rem;
+    padding: 12px;
+  }
+}
+
+/* Footer styling to match the book theme */
+.footer {
+  background-color: var(--physical-ai-light-bg);
+  color: var(--physical-ai-neutral);
+}
+
+.footer__title {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer__link-item {
+  color: var(--physical-ai-neutral);
+  text-decoration: none;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
+.footer__copyright {
+  color: var(--physical-ai-neutral);
+  border-top: 1px solid var(--ifm-toc-border-color);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Navigation styling */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: var(--physical-ai-card-bg);
+  border-right: 1px solid var(--ifm-toc-border-color);
+}
+
+/* Custom styling for interactive elements */
+.interactive-element {
+  background-color: var(--ifm-color-emphasis-100);
+  border-left: 4px solid var(--physical-ai-accent);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Styling for equations and mathematical content */
+.math-equation {
+  text-align: center;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 4px;
+  overflow-x: auto;
+}

@@ -1,55 +1,56 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+Version change: N/A -> 1.0.0 (Initial creation)
+Added sections: All principles and sections as specified for the AI-Native Textbook project
+Removed sections: None (this is an initial creation)
+Templates requiring updates:
+- ✅ plan-template.md - Will need to ensure the Constitution Check aligns with new principles
+- ✅ spec-template.md - Aligned with new requirements
+- ✅ tasks-template.md - Aligned with new task categorization reflecting new principles
+Runtime guidance docs: README.md not found - no updates needed
+Follow-up TODOs: None - all placeholders have been filled
+-->
+# AI-Native Textbook for Physical AI & Humanoid Robotics Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Interactive Education Focus
+Every feature must enhance the educational experience of the Physical AI & Humanoid Robotics course. All implementations should prioritize user engagement and learning outcomes over technical complexity. Products must feel like a real AI-powered education platform.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clean Architecture & Modularity
+Maintain simple, readable code with clean separation of concerns. Backend must be modular (FastAPI + services + routes), frontend extremely simple. Use clean folder structure: /backend, /website, /rag, /agents.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Performance & Accessibility
+Products must load quickly, work on mobile devices, support low-end devices, and feel responsive. All features must work on free tiers (Qdrant + Neon). No unnecessary animations or dependencies that could slow performance.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Functional Completeness
+Each core deliverable must be fully functional: Docusaurus-based textbook with 6-8 chapters, RAG chatbot answering questions ONLY from the book, user authentication (Better-Auth), personalized content, Urdu translation, auto-generated summaries/quizzes.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Grounded AI Interactions
+AI features (RAG chatbot, personalization, content generation) must be accurate, cited, and grounded in the source material. Implement proper chunking and embeddings to ensure high accuracy.
 
-### [PRINCIPLE_6_NAME]
+### VI. Deployability & Monitoring
+Systems must be deployable within 90 seconds with URLs for frontend (Vercel), backend (Railway), vectors (Qdrant), and database (Neon). Include health checks and logging to monitor backend errors.
 
+## Technology Stack Requirements
+Backend: FastAPI, Services architecture
+Frontend: Docusaurus
+Authentication: Better-Auth
+Vector DB: Qdrant
+Database: Neon
+Deployment: Frontend → Vercel, Backend → Railway
+Translation: One-click Urdu translation
+AI Features: RAG, Personalization, Auto-generation
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow
+TDD approach for critical functionality
+Code reviews focusing on compliance with principles
+Performance testing for mobile/low-end devices
+Testing of all AI features for accuracy and grounding
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+All PRs/reviews must verify compliance with the six core principles.
+Amendments require team discussion and consensus.
+Complexity must be justified with clear learning or technical benefits.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-18 | **Last Amended**: 2025-12-18

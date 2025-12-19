@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Distribution
+dist/
+build/
+
+# Docusaurus
+.docusaurus/
+.cache/
+
+# Logs
+*.log
+
+# Environment
+.env*
+
+# Testing
+coverage/
+
+# OS generated
+.DS_Store
+Thumbs.db
